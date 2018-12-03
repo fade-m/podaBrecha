@@ -1,0 +1,862 @@
+
+/* Tipos de letras
+----------------------------------------------------------------------------------------------------*/
+
+.labelstit {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 15px;
+	color: #003300;
+}
+.labelsmain {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 13px;
+	color: #003300;
+	
+}
+.labelsmini {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 11px;
+	color: #003300;
+	
+}
+.labelsmark{
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 13px;
+	color: #002e8c;
+}
+.btn
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border: 1px solid #CA6704;
+	/*filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#CEE4FD',EndColorStr='#CFD9BB');*/
+	cursor:hand;
+	}
+.labelserror {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+	color: red;
+}
+
+
+/* Focus en Inputs
+----------------------------------------------------------------------------------------------------*/
+
+input:disabled{
+  border: 1px solid #696969;
+  background-color:#FFFFFF;
+  font-family: Verdana;
+  font-size: 12px;
+  color:#000000;
+}
+input{
+  border: 1px solid #696969;
+  background-color:#FFFFFF;
+  color:#000000;
+  font-family: Verdana;
+  font-size: 12px;
+}
+input:focus{
+  border: 1px solid #000066;
+  background-color: #D6E8FE;
+  font-family: Verdana;
+  font-size: 12px;
+}
+input:hover{
+  border: 1px solid #000000;
+  background-color: #D6E8FE;
+  font-family: Verdana;
+  font-size: 12px;
+  color:Black;
+}
+
+
+#pieInterno p {
+	font-size: .9em;
+	color: #EEEEEE;
+	text-align:center;
+	margin:0; padding:15px;
+}
+
+#pieInterno a, #pieInterno a:active, #pieInterno a:visited {
+	color: #A9CB6A;
+	text-decoration: none;
+}
+
+#pieInterno a:hover {
+	color: #A9CB6A;
+	text-decoration: underline;
+}
+
+/* Reproduciendo el comportamiento anterior pero ahora en un tamaño mayor aplicar en formularios BLANCO
+----------------------------------------------------------------------------------------------------*/
+
+.form-datos {
+width:auto;
+padding: 10px 10px;
+}
+.datos {
+margin-bottom: 10px;
+}
+.datos {
+background-color: #FFFFFF;
+padding: 15px 15px 15px;
+margin: 0 auto 10px;
+width:auto;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Reproduciendo el comportamiento anterior pero ahora en un tamaño mayor aplicar en encabezados con div GRIS
+----------------------------------------------------------------------------------------------------*/
+
+.form-header {
+width:auto;
+padding: 10px 10px;
+}
+.header {
+margin-bottom: 10px;
+}
+.header {
+background-color: #C8C5C5;
+padding: 10px 10px 10px;
+margin: 0 auto 5px;
+width:auto;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Para encabezados de tablas de color verdecin 
+----------------------------------------------------------------------------------------------------*/
+
+.dhel {
+	background-image:url(../img/dialogHeaderEdgeL.gif);
+	background-repeat: repeat-y;
+	background-position: top left;
+	width: 20px;
+	height: 25px;
+	}
+.dht {
+	background-image:url(../img/dialogHeaderT.gif);
+	color: #666666;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-weight: normal;
+	font-size: 11px;
+	padding-left: 4px;
+	padding-top: 1px;
+	vertical-align: middle;
+	}
+.dher {
+	background-image:url(../img/dialogHeaderEdgeR.gif);
+	background-repeat: repeat-y;
+	background-position: top right;
+	width: 20px;
+	height: 25px;
+	}
+	
+	
+/**********************************************************************
+ * Button Styles                                                      *
+ **********************************************************************/
+a.button_link, .thc a.button_link, .tic a.button_link, .ttc a.button_link {
+	color: #888888;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 9px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	padding-left: 4px;
+	padding-right: 4px;
+	width: 100%;
+	}
+
+a.button_link:hover, .thc a.button_link:hover, .tic a.button_link:hover, .ttc a.button_link:hover {
+	color: #666666;
+	text-decoration: none;
+	}
+
+.button-TL-white, .bTL {
+	background-image:url(../img/buttonTL.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	width: 9px;
+	height: 4px;
+	}
+.button-T-white, .bT {
+	background-image:url(../img/buttonT.gif);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	height: 4px;
+	}
+.button-TR-white, .bTR {
+	background-image:url(../img/buttonTR.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	width: 15px;
+	height: 4px;
+	}
+.button-L-white, .bL {
+	background-image:url(../img/buttonL.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	width: 9px;
+	height: 12px;
+	}
+.button-white, .bC {
+	background-image:url(../img/buttonC.gif);
+	height: 12px;
+	white-space: nowrap;
+	}
+.button-R-white, .bR {
+	background-image:url(../img/buttonR.gif);
+	background-repeat: no-repeat;
+	background-position: center left;
+	width: 15px;
+	height: 12px;
+	}
+.button-BL-white, .bBL {
+	background-image:url(../img/buttonBL.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+	width: 9px;
+	height: 8px;
+	}
+.button-B-white, .bB {
+	background-image:url(../img/buttonB.gif);
+	background-repeat: repeat-x;
+	background-position: top center;
+	height: 8px;
+	}
+.button-BR-white, .bBR {
+	background-image:url(../img/buttonBR.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	width: 15px;
+	height: 8px;
+	}
+
+	
+/**********************************************************************
+ * Pagination Styles                                                  *
+ **********************************************************************/
+.button_bar_cell, .prbbc {
+	background-image:url(../img/paginationRowT.gif);
+	background-repeat: repeat-x;
+	padding-bottom: 3px;
+	vertical-align: bottom;
+	}
+
+.prbg {
+	background-image:url(../img/ButtonBarBackground.gif);
+	background-repeat: repeat-x;
+	color: #666666;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: normal;
+	padding-left: 3px;
+	padding-right: 3px;
+	white-space: nowrap;
+	}
+
+.pagination_area, .pra {
+	background-image:url(../img/paginationRowT.gif);
+	background-repeat: repeat-x;
+	color: #003366;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	padding-bottom: 3px;
+	vertical-align: bottom;
+	white-space: nowrap;
+	}
+
+.pagination_label, .prl {
+	color: #003366;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: normal;
+	vertical-align: middle;
+	white-space: nowrap;	
+	padding: 2px;
+	}
+
+.pagination_value, .prv {
+	color: #003366;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: bold;
+	vertical-align: middle;
+	white-space: nowrap;	
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+
+.Pagination_Input, .pri {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	background-color: #ffffff;
+	border-bottom: 1px #eeeeee solid;
+	border-left: 1px #555555 solid;
+	border-right: 1px #eeeeee solid;
+	border-top: 1px #555555 solid;
+	}
+
+.pagination_row, .pr {
+	font-weight: bold;
+	vertical-align: middle;
+	border-bottom: 1px #a8beb1 solid;
+	text-align: center;
+}
+
+.paginationRowEdgeL, .prel {
+	background-image:url(../img/paginationRowEdgeL.gif);
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 37px;
+	}
+
+.paginationRowEdgeR, .prer {
+	background-image:url(../img/paginationRowEdgeR.gif);
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 37px;
+	}
+
+.paginationButtonFirst, .prbf {
+	background-image:url(../img/arrow_beg.gif);
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 25px;
+	}
+
+.paginationButtonPrevious, .prbp {
+	background-image:url(../img/arrow_left.gif);
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 25px;
+	}
+
+.paginationButtonNext, .prbn {
+	background-image:url(../img/arrow_right.gif);
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 25px;
+	}
+
+.paginationButtonLast, .prbl {
+	background-image:url(../img/arrow_end.gif);
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 25px;
+	}	
+	
+/**********************************************************************
+ * Table Rows Styles                                                  *
+ **********************************************************************/
+.header_cell, .thc {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	background-color: #E6E6E6;
+	font-weight:bold;
+	padding: 5px;
+	border-right: 1px #dddddd solid;
+	border-bottom: 1px #aaaaaa solid;
+	color: #000000;
+	vertical-align: top;
+	}
+
+.header_cell, .thd {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 18px;
+	background-color: #E6E6E6;
+	padding: 5px;
+	border-right: 1px #dddddd solid;
+	border-bottom: 1px #aaaaaa solid;
+	color: #000000;
+	vertical-align: top;
+	}
+	
+.thcMark {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	background-color: #e4f5d3;
+	font-weight:normal;
+	padding: 5px;
+	border-right: 1px #dddddd solid;
+	border-bottom: 1px #aaaaaa solid;
+	color: #000000;
+	vertical-align: top;
+	}
+.thcMarkGray {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	background-color: #E6E6E6;
+	font-weight:normal;
+	padding: 5px;
+	border-right: 1px #dddddd solid;
+	border-bottom: 1px #aaaaaa solid;
+	color: #000000;
+	vertical-align: top;
+	}
+
+.header_cell_empty, .thce {
+	background-color: #e4f5d3;
+	border-bottom: 1px #aaaaaa solid;
+	}
+
+.column_header, .tch {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: bold;
+	}
+
+.column_header A, .column_header_scrolling A, .tch A, .tchs A {
+	color: #888888; 
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	text-decoration: underline;
+	} 
+
+.column_header A:hover, .column_header_scrolling A:hover, .tch A:hover, .tchs A:hover {
+	color: #666666;
+	text-decoration: underline;
+	}
+
+.column_header_scrolling, .tchs {
+	font-weight: bold;
+	border-left: 1px #dddddd solid;
+	border-right: 1px #dddddd solid;
+	border-bottom: 1px #aaaaaa solid;
+	}
+
+.columnHeaderFilterPadding, .tchfilp {
+	padding-top: 4px;
+	text-align: center;
+	}
+
+.columnHeaderFilterPadding A, .tchfilp A {
+	text-decoration: none;
+	}
+
+.columnHeaderFilterPadding A:hover, .tchfilp A:hover {
+	text-decoration: none;
+	}
+
+.icon_cell, .alt_icon_cell, .tic, .taic {
+	padding: 0px;
+	color: #444444;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border-right: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	width: 16px;
+	}
+
+.icon_cell_highlighted, .alt_icon_cell_highlighted, .tich, .taich {
+	padding: 0px;
+	color: #444444;
+	vertical-align: middle;
+	border-right: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	width: 16px;
+	background-color: #e4f5d3;
+	}
+
+.icon_cell_selected, .tics {
+	padding: 0px;
+	color: #444444;
+	vertical-align: middle;
+	border-right: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	width: 16px;
+	background-color: #f7fff0;
+	}
+
+.icon_cell_empty, .tice {
+	background-color: #ffffff;
+	border-bottom: 1px #cccccc solid;
+	width: 0px;
+	}
+
+.icon_cell_highlighted_empty, .tiche {
+	background-color: #e4f5d3;
+	border-bottom: 1px #cccccc solid;
+	width: 0px;
+	}
+
+.icon_cell_selected_empty, .ticse {
+	background-color: #f7fff0;
+	border-bottom: 1px #cccccc solid;
+	width: 0px;
+	}
+
+.table_cell, .alt_table_cell, .ttc, .tatc {
+	padding: 5px;
+	color: #666666;
+	vertical-align: top;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	text-align: left;
+	border-right: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	background-color: #ffffff;
+	}
+
+.table_cell_highlighted, .alt_table_cell_highlighted, .ttch, .tatch {
+	padding: 5px;
+	color: #666666;
+	vertical-align: top;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	text-align: left;
+	border-right: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	background-color: #e4f5d3;
+	}
+
+.table_cell_selected, .ttcs {
+	padding: 5px;
+	color: #666666;
+	vertical-align: top;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	text-align: left;
+	border-right: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	background-color: #f7fff0;
+	}
+
+.ttc a, .tatc a, .ttch a, .tatch a, .ttcs a, .dfv a, .dialog_field_value a {
+	color: #666666;
+	}
+
+.ttc a:hover, .tatc a:hover, .ttch a:hover, .tatch a:hover, .ttcs a:hover, .dfv a:hover, .dialog_field_value a:hover {
+	color: #222222;
+	}
+
+.totals_cell, .tpttc {
+	padding: 5px;
+	color: #666666;
+	vertical-align: top;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	text-align: left;
+	border-right: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	background-color: #ffffff;
+	width: 48px;
+	}
+
+.totals_cell_value, .tpttcv {
+	padding: 5px;
+	color: #666666;
+	vertical-align: top;
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	text-align: right;
+	background-color: #ffffff;
+	}
+
+.page_total_label, .tptl {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	padding-left: 20px;
+	white-space: nowrap;
+	vertical-align: middle;
+	}
+
+.page_total_value, .tptv {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	padding-left: 20px;
+	white-space: nowrap;
+	vertical-align: middle;
+	}
+
+.grand_total_label, .tgtl {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	padding-left: 20px;
+	white-space: nowrap;
+	vertical-align: middle;
+	}
+
+.grand_total_value, .tgtv {
+	font-family: Verdana, Geneva, ms sans serif;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 3px;
+	}
+
+.tableRowsEdge, .tre {
+	border-left: 1px #cccccc solid;
+	background-color: #cccccc;
+	}
+
+
+/*Para los popups */
+
+.modalPopupBackground
+{
+	/*background-color: #ECECF8;*/
+	background-color: #666699;
+	filter: alpha(opacity=50);
+	opacity: 0.7;
+}
+
+.iFramePopUp
+{
+	width: 500px;
+	height: 510px;
+	overflow:auto;
+}
+.iFramePopUpGrafica
+{
+	width: 905px;
+	height: 580px;
+	overflow:auto;
+}
+
+.iFramePopUpConceptos
+{
+	width: 890px;
+	height: 570px;
+	overflow:auto;
+}
+.cerrarPopUp 
+{
+	background:url(../img/icon_close.gif);
+	background-position:right;
+	background-repeat:no-repeat;
+	height:24px;
+	width:24px;
+	float:right;
+	cursor:pointer;
+	margin-right:5px;
+	margin-top:5px;
+}
+
+/**********************************************************************
+ * Estilos de ajax control tool kit                                                 *
+ **********************************************************************/
+
+.validatorCalloutHighlight
+{
+    background-color: lemonchiffon;
+}
+/************ PasswordStrength Related Styles ***********************/
+.TextIndicator_TextBox1
+{
+     background-color:Gray;
+     color:White;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+}
+
+.BarIndicator_TextBox2_weak
+{
+    color:Red;
+    background-color:Red;
+}
+.BarIndicator_TextBox2_average
+{
+    color:Blue;
+    background-color:Blue;
+}
+.BarIndicator_TextBox2_good
+{
+    color:Green;
+    background-color:Green;
+}
+
+.BarBorder_TextBox2
+{
+    border-style:solid;
+    border-width:1px;
+    padding:2px 2px 2px 2px;
+    width:200px;
+    vertical-align:middle;
+}
+
+.TextIndicator_TextBox3
+{
+     background-color:Blue;
+     color:Yellow;
+     font-size:small;
+     font-variant:small-caps;
+     padding: 2px 3px 2px 3px;
+}
+
+.TextIndicator_TextBox3_Handle
+{
+	width:16px;
+	height:14px;
+	background-image:url(images/Question.png);
+	overflow:hidden;
+	cursor:help;
+}
+
+.TextIndicator_TextBox1_Strength1
+{
+     background-color:Gray;
+     color:White;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength2
+{
+     background-color:Gray;
+     color:Yellow;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength3
+{
+     background-color:Gray;
+     color: #FFCAAF;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength4
+{
+     background-color:Gray;
+     color:Aqua;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+.TextIndicator_TextBox1_Strength5
+{
+     background-color:Gray;
+     color: #93FF9E;
+     font-family:Arial;
+     font-size:x-small;
+     font-style:italic;
+     padding: 2px 3px 2px 3px;
+     font-weight:bold;
+}
+
+
+
+.dynamicPopulate_Normal
+{
+	border:silver 1px inset;
+	padding:2px;
+	text-align:center;
+	height:2em;
+	margin:5px;
+	width:200px;
+}
+
+.dynamicPopulate_Updating 
+{
+	background-image:url(images/loading.gif);
+	background-repeat:no-repeat;
+	border:silver 1px inset;
+	text-align:center;
+	padding:2px;
+	height:2em;
+	margin:5px;
+	width:200px;
+}
+
+/*Textbox Watermark*/
+
+.unwatermarked {
+	text-transform: uppercase;	
+}
+
+.watermarked {
+	padding:2px 0 0 2px;
+	border:1px solid #BEBEBE;
+	background-color:#F0F8FF;
+	color:gray;
+}	
+
+/*Estilos especiales para emular dropdownlist como simples labels */
+
+div.dropdown-wrapper { 
+    width: 300px; /* Sets the width of your dropdown */
+}
+
+div.dropdown-wrapper select { 
+
+    background-color:transparent /* This hides the background */; 
+    background-image:none; 
+    -webkit-appearance: none /* Webkit Fix */; 
+    border:none; 
+    box-shadow:none; 
+    padding:0.3em 0.5em; 
+}
+div.dropdown-wrapper input { 
+
+    background-color:transparent /* This hides the background */; 
+    background-image:none; 
+    -webkit-appearance: none /* Webkit Fix */; 
+    border:none; 
+    box-shadow:none; 
+    padding:0.3em 0.5em; 
+}
+
+
+
+
+ .CajaDialogo
+    {
+        background-color: #E4F5D3;
+        border-width: 1px;
+        border-style: outset;
+        border-color: #213B48;
+        padding: 0px;
+        width: 275px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 13px;
+    }
+    .CajaDialogo div
+    {
+        margin: 7px;
+        text-align: center;
+    }
+    
+     .FondoAplicacion
+    {
+        background-color: Gray;
+        filter: alpha(opacity=70);
+        opacity: 0.7;
+    }
+
+.collapsePanelHeader{
+	width:100%;
+	height:30px;
+	background-image: url(../img/bg-menu-main.png);
+	background-repeat:repeat-x;
+	color:#FFF;
+	font-weight:bold;
+}

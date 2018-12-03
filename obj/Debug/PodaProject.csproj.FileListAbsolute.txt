@@ -1,0 +1,12 @@
+L:\DOCUMENTOS\CFE\Projects\PodaProject\PodaProject\bin\PodaProject.dll.config
+L:\DOCUMENTOS\CFE\Projects\PodaProject\PodaProject\bin\PodaProject.dll
+L:\DOCUMENTOS\CFE\Projects\PodaProject\PodaProject\bin\PodaProject.pdb
+L:\DOCUMENTOS\CFE\Projects\PodaProject\PodaProject\obj\Debug\PodaProject.dll
+L:\DOCUMENTOS\CFE\Projects\PodaProject\PodaProject\obj\Debug\PodaProject.pdb
+L:\DOCUMENTOS\CFE\Projects\PodaProject\PodaProject\obj\Debug\PodaProject.csprojResolveAssemblyReference.cache
+D:\CFE\PodaProject\PodaProject\bin\PodaProject.dll.config
+D:\CFE\PodaProject\PodaProject\bin\PodaProject.dll
+D:\CFE\PodaProject\PodaProject\bin\PodaProject.pdb
+D:\CFE\PodaProject\PodaProject\obj\Debug\PodaProject.dll
+D:\CFE\PodaProject\PodaProject\obj\Debug\PodaProject.pdb
+D:\CFE\PodaProject\PodaProject\obj\Debug\PodaProject.csprojResolveAssemblyReference.cache

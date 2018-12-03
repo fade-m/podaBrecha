@@ -1,0 +1,41 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+	background-position: center;
+	background: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	background-attachment: fixed;
+	background-repeat: repeat;
+}
+
+
+
+
+.errorTituloInicio
+{
+
+	color:#67B2FD;
+	font-family: Verdana,Courier, Times New Roman, Courier ;
+	font-size:35px;
+
+}
+
+
+.errorVinetasInicio
+{
+
+	color:#000000;
+	font-family:Verdana,Courier, Times New Roman, Courier ;
+	font-size:15px;
+
+}
+
+.mylistli  
+{
+	list-style:circle;
+	font-family:Verdana,Courier, Times New Roman, Courier;
+	font-size:18px;
+}

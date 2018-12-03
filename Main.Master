@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Main.Master.cs"
+    Inherits="PodaProject.Main" CodeFile="~/Main.Master.cs" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>CFE DIVISIÓN SURESTE - NOVA - </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
+
+    <!-- BOOTSTRAP -->
+    <link href="~/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- ADMIN LTE -->
+    <link href="~/bootstrap/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/bootstrap/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <!-- FONT & ICONS -->
+    <link href="~/bootstrap/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/bootstrap/plugins/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+                               
+    <!--[if lt IE 9]>
+        <script src="bootstrap/Scripts/html5shiv.js"></script>
+        <script src="bootstrap/Scripts/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body class="skin-purple sidebar-mini" runat="server">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+
+            <!-- Logo -->
+            <a href="~/App/Inicio.aspx" class="logo" runat="server">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">
+                    <img runat="server" width="30" height="30" src="~/images/oficial/logo.png" alt="logotipo" />
+                </span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg">
+                    <img runat="server" width="30" height="30" src="~/images/oficial/logo.png" alt="logotipo" />
+                    Poda <b>&</b> Brecha
+                </span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                <img runat="server" src="~/images/iconos/user.png" class="user-image" alt="User Image" />
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs"><%= Usuario.NombreCorto() %></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <img runat="server" src="~/images/iconos/user.png" class="img-circle" alt="User Image" />
+                                    <p>
+                                        <%= Usuario.NombreCompleto() %>
+                                        <small><%= Usuario.Rol.Nombre %></small>
+                                    </p>
+                                </li>
+                                <li class="user-body">
+                                    <div class="text-center">
+                                        <asp:Literal ID="litRol" runat="server"></asp:Literal>
+                                    </div>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a runat="server" href="~/App/Perfil.aspx" class="btn btn-default btn-flat">&nbsp;&nbsp;&nbsp;Mi perfil&nbsp;&nbsp;&nbsp;</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <form method="post" action="<%= ResolveUrl("~/App/Salir.aspx") %>">
+                                            <input type="submit" class="btn btn-default btn-flat" value="Cerrar Sesión" />
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img runat="server" src="~/images/iconos/user.png" class="img-circle" alt="User Image" />
+                    </div>
+                    <div class="pull-left info">
+                        <p></p>
+                        <p><%= Usuario.NombreCorto() %></p>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="header">MENÚ DE OPCIONES</li>
+                    <asp:Literal ID="litMenu" runat="server"></asp:Literal>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    <asp:ContentPlaceHolder ID="cabecera" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <small>
+                        <asp:ContentPlaceHolder ID="descripcion" runat="server"></asp:ContentPlaceHolder>
+                    </small>
+                </h1>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- Your Page Content Here -->
+                <asp:ContentPlaceHolder ID="contenido" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- Default to the left -->
+            <strong><a href="http://www.cfe.gob.mx">CFE División Sureste</a> &copy; <%= DateTime.Now.Year %>. </strong>Todos los derechos reservados.
+        </footer>
+
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 2.1.3 -->
+    <script type="text/javascript" src="<%= ResolveUrl("~/bootstrap/plugins/jQuery/jQuery-2.1.3.min.js") %>"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script type="text/javascript" src="<%= ResolveUrl("~/bootstrap/bootstrap/js/bootstrap.min.js") %>"></script>
+    <!-- AdminLTE App -->
+    <script type="text/javascript" src="<%= ResolveUrl("~/bootstrap/dist/js/app.min.js") %>"></script>
+
+    <asp:ContentPlaceHolder ID="scripts" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

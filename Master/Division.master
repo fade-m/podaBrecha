@@ -1,0 +1,367 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Master/Division.master.cs" Inherits="PodaProject.Master.Division" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>CFE DIVISIÓN SURESTE - NOVA - </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+        name='viewport' />
+    <link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/plugins/iCheck/flat/blue.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet"
+        type="text/css" />
+    <link href="bootstrap/plugins/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet"
+        type="text/css" />
+    <link href="bootstrap/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet"
+        type="text/css" />      
+
+  <%--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
+
+
+    <link href="bootstrap/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"
+        type="text/css" />-->
+    <!--[if lt IE 9]>
+        <script src="bootstrap/Scripts/html5shiv.js"></script>
+        <script src="bootstrap/Scripts/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="skin-blue sidebar-mini">
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <header class="main-header">
+                <a href="#identidad" class="logo" data-toggle="modal">
+                    <span class="logo-mini">
+                        <asp:Literal ID="litNombreSistemaCorto" runat="server"></asp:Literal>
+                    </span>
+                    <span class="logo-lg">
+                        <asp:Literal ID="litNombreSistemaLargo" runat="server"></asp:Literal>
+                    </span>
+                </a>
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <asp:Literal ID="litListaNotificaciones" runat="server">
+                            </asp:Literal>
+                            <asp:ContentPlaceHolder ID="cphNotificaciones" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <li>
+                                <a href="#" data-toggle="control-sidebar"><i class="fa fa-outdent"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        <aside class="main-sidebar">
+                <section class="sidebar">
+                    <%--<div class="sidebar-form">
+                        <div class="input-group">
+                            <asp:TextBox ID="txtAtajo"   class="form-control" runat="server" placeholder="Vía Corta"></asp:TextBox>
+                            <span class="input-group-btn">
+                                <asp:Button ID="btnBuscarAtajo" runat="server" class="btn btn-flat" 
+                                Text="Ir" onclick="btnBuscarAtajo_Click"></asp:Button>
+                            </span>
+                        </div>
+                    </div>--%>
+                    <ul class="sidebar-menu">
+                        <li class="header">Menu Principal</li>
+                        <asp:Literal ID="litMenu" runat="server">
+                        </asp:Literal>
+                        <asp:Literal ID="litMenuFavoritos" runat="server">
+                        </asp:Literal>
+                        <asp:ContentPlaceHolder ID="cphMenu" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ul>
+                </section>
+            </aside>
+        <div class="content-wrapper">
+            <section class="content-header">
+                  <h1>
+                    <asp:Literal ID="litTituloPagina" runat="server"></asp:Literal>
+                    <small>
+                        <asp:Literal ID="litSubtitulo" runat="server"></asp:Literal>
+                    </small>
+                  </h1>
+                  <ol class="breadcrumb">
+                    <li><asp:Literal ID="litRutaActualVisitada" runat="server"></asp:Literal></li>
+                  </ol>
+                </section>
+                <section class="content">
+                         <asp:ContentPlaceHolder ID="cphFila1" runat="server">
+
+
+                          
+
+                         </asp:ContentPlaceHolder>
+                                                              
+                </section>
+    
+
+    <div id="juridico" class="modal fade" style="display: none;">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Departamento Jurídico Divisional</h4>
+            </div>
+            <div class="modal-body">
+            <div class="form-group">
+                <ul>
+                    <li><a href="http://ldcaja02.cfemex.com/caj/jurismatica/jurismatica.nsf" target="_blank">Jurismática</a></li>
+                    <li><a href="http://10.18.2.49/sistemas/asuntosJuridico/" target="_blank">Aeudos en poder jurídico</a></li>
+                    <li><a href="http://10.18.2.60/webcalendar/login.php" target="_blank">Web Calendar</a></li>
+		            <li><a href="http://www.tff.gob.mx/index.php/juicio-en-linea-video-0" target="_blank">Juicion en línea</a></li>
+                    <li><a href="http://www.dgepj.cjf.gob.mx/internet/expedientes/exp_ini.asp?Exp=1" target="_blank">Estado procesal poder judicial</a></li>
+                    <li><a href="http://consultasjfca.stps.gob.mx:209/consulta_edoproc/consultaexpedientes.aspx" target="_blank"> Estado procesal labores</a></li>
+                    <li><a href="http://sjf.scjn.gob.mx/SJFSem/Paginas/SemanarioIndex.aspx" target="_blank">IUS</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">Cerrar</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div id="iscDivisional" class="modal fade" style="display: none;">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">ISC Divisional</h4>
+            </div>
+            <div class="modal-body">
+            <div class="form-group">
+                    <div class=" col-xs-12 " style=" text-align:center;">
+                        <img alt="ING. LUIS ALBERTO CISNEROS CISNEROS"  src="ModPagDivisional/images/comercial/medicion.jpg"   width="131px" height="175px"/>
+                        <h5>ING. LUIS ALBERTO CISNEROS CISNEROS</h5>
+                    </div>
+                    <div class="col-xs-12">
+                        <h4>Objetivo</h4>
+                        <p>
+                        Integrar, evaluar y contolar los procesos operativos mediante la asignacion oportuna de recursos economicos, materiales y humanos, ademas de identificar la energia activa del sistema electrico y asegurar la calidad de las mediciones realizadas manteniendo la cadena de trazabilidad de los Partones, Instrumentos, Equipos de medicion y Pruebas de las areas de medicion de las Zonas de Distribucion.
+                        </p>
+
+                        <h4>Misión</h4>
+                        <p>
+                            Planear, gestionar y asignar los recursos necesarios para los diferentes procesos de medición que realizan las zonas de distribución, asegurando la calidad de las mediciones y comprometidos con nuestro personal, sociedad y medio ambiente.
+                        </p>
+
+                        <h4>Visión</h4>
+                        <p>Ser líder efectivo y ejemplar en todos los sistemas y procesos de medición a nivel nacional.</p>
+
+                        <h4>Valores</h4>
+                        <p>Servicio, Honestidad, Responsabilidad, Respeto, Trabajo en equipo, Seguridad, Lealtad, Orden, Educación, Perseverancia, Creatividad y Protección del medio ambiente</p>
+
+                        
+
+                        <h4>Politica de Calidad</h4>
+                        <p>Asegurar la calidad de las mediciones aplicando sistemas y procesos que cubran las expectativas de nuestros clientes, basados en un modelo de calidad ISO 9001:2000.s</p>
+                    </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">Cerrar</button>
+        </div>
+        </div>
+    </div>
+    </div> 
+    <div id="sitiosDeInteres" class="modal fade" style="display: none;">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Sitios de Interes</h4>
+            </div>
+            <div class="modal-body">
+            <div class="form-group">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs pull-right">
+                      <li class="active"><a href="#TabPeriodicos" data-toggle="tab">Periódicos</a></li>
+                      <li><a href="#TabSecretarias" data-toggle="tab">Secretarías</a></li>
+                      <li><a href="#TabComputacion" data-toggle="tab">Computación</a></li>
+                      <li><a href="#TabOtrasDiv" data-toggle="tab">Otras Divisiones</a></li>
+                      <li><a href="#TabHermes" data-toggle="tab">Hermes</a></li>
+                    </ul>
+                    <div class="tab-content no-padding">
+                        <div class="tab-pane active" id="TabPeriodicos" style="position: relative; ">
+                            <div class=" col-md-12 col-lg-12 col-xs-12 col-sm-12 ">
+                            <br />
+                                <h3>Nacionales</h3>
+                                <ul>
+                                    <li><a href="http://www.eluniversal.com.mx/noticias.html" target="_blank" class="letra_negra">El Universal </a></li>
+                                    <li><a href="http://www.reforma.com/" target="_blank">El Reforma </a></li>
+                                    <li><a href="http://www.elfinanciero.com.mx" target="_blank">El Financiero</a></li>
+                                    <li><a href="http://www.economista.com.mx/" target="_blank">El Economista</a></li>
+                                    <li><a href="http://www.diariomonitor.com.mx/" target="_blank">Diario
+                                    Monitor</a></li>
+                                    <li><a href="http://www.nuevoexcelsior.com.mx/" target="_blank">El Excelsior</a></li>
+                                    <li><a href="http://www.jornada.unam.mx/indexfla.php" target="_blank">La Jornada </a></li>
+                                    <li><a href="http://www.cronica.com.mx/" target="_blank">La
+                                    Cr&oacute;nica </a></li>
+                                </ul>
+                                <h3>Locales</h3>
+                                <ul>
+                                  <li><a href="http://www.noticias-oax.com.mx/" target="_blank">Noticias</a><a href="http://www.eluniversal.com.mx/noticias.html" target="_blank" class="letra_negra"></a></li>
+                                  <li><a href="http://www.imparcialenlinea.com/" target="_blank">El Imparcial</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane " id="TabSecretarias" style="position: relative; ">
+                            <div class=" col-md-12 col-lg-12 col-xs-12 col-sm-12 ">
+                            <br />
+                                <ul>
+                                    <li><a href="http://www.presidencia.gob.mx/" target="_blank">Presidencia
+                                    de la Rep&uacute;blica</a><a href="http://www.eluniversal.com.mx/noticias.html" target="_blank" class="letra_negra"></a></li>
+                                    <li><a href="http://www.oaxaca.gob.mx/" target="_blank">Gobierno
+                                    del Estado de Oaxaca</a><a href="http://www.reforma.com/" target="_blank"></a></li>
+                                    <li><a href="http://www.chiapas.gob.mx/" target="_blank">Gobierno
+                                    del Estado de Chiapas</a><a href="http://www.elfinanciero.com.mx" target="_blank"></a></li>
+                                    <li><a href="http://www.tabasco.gob.mx/" target="_blank">Gobierno
+                                    del Estado de Tabasco</a><a href="http://www.economista.com.mx/" target="_blank"></a></li>
+                                    <li><a href="http://www.e-mexico.gob.mx/" target="_blank">e-M&eacute;xico</a><a href="http://www.diariomonitor.com.mx/" target="_blank"></a></li>
+                                    <li><a href="http://www.energia.gob.mx/" target="_blank">Secretar&iacute;a
+                                    de Energ&iacute;a</a><a href="http://www.nuevoexcelsior.com.mx/" target="_blank"></a></li>
+                                    <li><a href="http://www.iie.org.mx/" target="_blank">Instituto
+                                    de Investigaciones El&eacute;ctricas</a><a href="http://www.jornada.unam.mx/indexfla.php" target="_blank"></a></li>
+                                    <li><a href="http://www.cft.gob.mx/" target="_blank">Comisi&oacute;n
+                                    Federal de Telecomunicaciones</a></li>
+                                    <li><a href="http://www.sct.gob.mx/" target="_blank">Secretar&iacute;a
+                                    de Comunicaciones y Tranporte</a></li>
+                                    <li><a href="http://www.sedesol.gob.mx/" target="_blank">Secretaria
+                                    de Desarrollo Social</a></li>
+                                    <li><a href="http://www.shcp.gob.mx/Paginas/default.aspx" target="_blank">Secretaria
+                                    de Hacienda y Cr&eacute;dito P&uacute;blico</a></li>
+                                    <li><a href="http://www.inegi.gob.mx/inegi/default.asp" target="_blank">INEGI</a></li>
+                                    <li><a href="http://www.pemex.com/" target="_blank">PEMEX</a></li>
+                                    <li><a href="http://www.infonavit.gob.mx/" target="_blank">INFONAVIT</a></li>
+                                    <li><a href="http://www.consar.gob.mx/" target="_blank">Comisi&oacute;n
+                                                          Nacional del Sistema de Ahorro para el
+                                    Retiro</a></li>
+                                    <li><a href="http://www.cenapred.unam.mx/" target="_blank">Centro
+                                    Nacional de Prevenci&oacute;n de Desastres</a><a href="http://www.cronica.com.mx/" target="_blank"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="TabComputacion" style="position: relative; ">
+                            <div class=" col-md-12 col-lg-12 col-xs-12 col-sm-12 ">
+                            <br />
+                                <ul>
+                                    <li><a href="http://welcome.hp.com/country/mx/es/welcome.html" target="_blank">HP</a></li>
+                                    <li><a href="http://la.borland.com.br/company/contact/where_mexico.html" target="_blank">BORLAND</a></li>
+                                    <li><a href="http://www.apache.org/" target="_blank">APACHE</a></li>
+                                    <li><a href="http://dev.mysql.com/" target="_blank">MYSQL</a></li>
+                                    <li><a href="http://www.oracle.com/mx/" target="_blank" class="letra_negra">ORACLE</a></li>
+                                    <li><a href="http://www.linux.org/" target="_blank">LINUX</a></li>
+                                    <li><a href="http://www.sco.com/" target="_blank">SCO</a></li>
+                                    <li><a href="http://www.microsoft.com/mexico/default.asp" target="_blank" class="letra_negra">MICROSOFT</a><a href="http://www.cronica.com.mx/" target="_blank"></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="TabOtrasDiv" style="position: relative; ">
+                            <div class=" col-md-12 col-lg-12 col-xs-12 col-sm-12 ">
+                            <br />
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li><a href="http://www.da0.cfemex.com/portal/runcms/modules/intro/" target="_blank">Divisi&oacute;n Baja California</a></li>
+                                                <li><a href="http://lddisx01.cfemex.com/" target="_blank">Divisi&oacute;n Golfo Centro</a></li>
+                                                <li><a href="http://bajio.cfemex.com/" target="_blank">Divisi&oacute;n Bajio</a></li>
+                                                <li><a href="http://uidgnnt3.cfemex.com/" target="_blank">Divisi&oacute;n Golfo Norte</a></li>
+                                                <li><a href="http://portal.df0.cfemex.com:7778/portal/page/portal/" target="_blank">Divisi&oacute;n Centro Occidente</a></li>
+                                                <li><a href="http://www.db0.cfemex.com/volt/divisional/index.html" target="_blank">Divisi&oacute;n Noroeste</a></li>
+                                                <li><a href="http://lddisx05.cfemex.com/apps/sdv3/portal.nsf/(Inicio)" target="_blank">Divisi&oacute;n Centro Oriente</a></li>
+                                                <li><a href="http://10.14.1.22/homepage/index.php" target="_blank">   Divisi&oacute;n Norte </a> </li>
+                                            </ul>
+                                        
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li><a href="http://dxd0007.cfemex.com/default.aspx" target="_blank">Divisi&oacute;n Jalisco</a></li>
+                                                <li><a href="http://lddisx10.cfemex.com/apps/sdv3/portal.nsf/(Inicio)" target="_blank"> Divisi&oacute;n Oriente</a></li>
+                                                <li><a href="http://lddisx09.cfemex.com/apps/sdv3/portal.nsf/(Inicio)" target="_blank">Divisi&oacute;n Centro Sur</a></li>
+                                                <li><a href="http://lddisx12.cfemex.com/apps/sdv3/Portal.nsf/(Inicio)" target="_blank">Divisi&oacute;n Peninsular</a></li>
+                                                <li><a href="http://dkdes.cfemex.com/index.html" target="_blank">Divisi&oacute;n Sureste</a></li>
+                                                <li><a href="http://dvmc.cfemex.com/" target="_blank"/a>Divisi&oacute;n Valle de Mexico Centro</a></li>
+                                                <li><a href="http://10.59.20.126/dvmn/" target="_blank">Divisi&oacute;n Valle de Mexico Norte </a></li>
+                                                <li><a href="http://dvmsportal.cfemex.com/portal/" target="_blank"/a>Divisi&oacute;n Valle de Mexico Sur</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="TabHermes" style="position: relative; ">
+                            <div class=" col-md-12 col-lg-12 col-xs-12 col-sm-12 ">
+                            <br />
+                               <ul>
+                                    <li><a href="http://hermes.dk0.cfemex.com/hermes/" target="_blank">HERMES</a></li>
+                               </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">Cerrar</button>
+        </div>
+        </div>
+    </div>
+    </div>
+        </div>
+        <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> <asp:Literal ID="litVersion" runat="server"></asp:Literal>
+                </div>
+                <strong>
+                    2016 
+                    <a href="http://10.18.2.49">
+                        <asp:Literal ID="litSistemaFooter" runat="server"></asp:Literal>
+                    </a>.
+                </strong> Todos los derechos reservados División Sureste.
+            </footer>
+        <aside class="control-sidebar">
+                <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                  <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                  <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="control-sidebar-home-tab">
+                        <asp:ContentPlaceHolder ID="cphTabHogar" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="tab-pane" id="control-sidebar-stats-tab">Estatus</div>
+
+                    <div class="tab-pane" id="control-sidebar-settings-tab"> 
+                        <asp:ContentPlaceHolder ID="cphTabConfiguracion" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </aside>
+        <div class='control-sidebar-bg'>
+        </div>
+    </div>
+    </form>
+   <asp:Literal ID="litScripts" runat="server">
+    </asp:Literal>
+    <asp:ContentPlaceHolder ID="cphScriptFinales" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
